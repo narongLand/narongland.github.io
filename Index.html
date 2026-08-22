@@ -71,4 +71,309 @@
     }
 
     .search-box input {
+
+      width: 90%;
+
+      max-width: 600px;
+
+      padding: 14px;
+
+      border: 1px solid #ccc;
+
+      border-radius: 8px;
+
+      font-size: 16px;
+
     }
+
+    .container {
+
+      max-width: 1100px;
+
+      margin: 30px auto;
+
+      padding: 0 20px;
+
+    }
+
+    .title {
+
+      text-align: center;
+
+      margin-bottom: 25px;
+
+    }
+
+    .land-card {
+
+      background: white;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+
+      margin-bottom: 30px;
+
+    }
+
+    .land-image {
+
+      width: 100%;
+
+      height: 300px;
+
+      object-fit: cover;
+
+      background: #ddd;
+
+    }
+
+    .land-info {
+
+      padding: 20px;
+
+    }
+
+    .land-info h2 {
+
+      margin-top: 0;
+
+      color: #1f6f43;
+
+    }
+
+    .price {
+
+      font-size: 25px;
+
+      font-weight: bold;
+
+      color: #d35400;
+
+      margin: 15px 0;
+
+    }
+
+    .details {
+
+      line-height: 1.9;
+
+      font-size: 16px;
+
+    }
+
+    .buttons {
+
+      display: flex;
+
+      gap: 10px;
+
+      margin-top: 20px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .button {
+
+      display: inline-block;
+
+      padding: 12px 20px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      color: white;
+
+      font-weight: bold;
+
+    }
+
+    .call {
+
+      background: #168aad;
+
+    }
+
+    .line {
+
+      background: #06c755;
+
+    }
+
+    .map {
+
+      background: #555;
+
+    }
+
+    footer {
+
+      background: #222;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 25px;
+
+      margin-top: 40px;
+
+    }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+
+        font-size: 25px;
+
+      }
+
+      .land-image {
+
+        height: 220px;
+
+      }
+
+      .price {
+
+        font-size: 22px;
+
+      }
+
+      .button {
+
+        width: 100%;
+
+        text-align: center;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>🏡 NarongLand</h1>
+
+    <p>ซื้อ • ขาย • ฝากขายที่ดิน</p>
+
+  </header>
+
+  <div class="search-box">
+
+    <input
+
+      type="text"
+
+      placeholder="🔎 ค้นหาที่ดิน เช่น อุบลราชธานี เมือง ขามใหญ่"
+
+    >
+
+  </div>
+
+  <main class="container">
+
+    <div class="title">
+
+      <h2>🏞️ ที่ดินประกาศขาย</h2>
+
+      <p>เลือกที่ดินที่คุณสนใจ</p>
+
+    </div>
+
+    <div class="land-card">
+
+      <img
+
+        class="land-image"
+
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
+
+        alt="ที่ดินประกาศขาย"
+
+      >
+
+      <div class="land-info">
+
+        <h2>ที่ดินทำเลดี ราคาน่าสนใจ</h2>
+
+        <div class="price">
+
+          💰 1,500,000 บาท
+
+        </div>
+
+        <div class="details">
+
+          📐 ขนาด: 2 ไร่<br>
+
+          📍 ตำบล: ขามใหญ่<br>
+
+          🏙️ อำเภอ: เมืองอุบลราชธานี<br>
+
+          🌳 จังหวัด: อุบลราชธานี<br>
+
+          ⚡ ไฟฟ้า: มี<br>
+
+          💧 น้ำประปา: มี<br>
+
+          📄 เอกสารสิทธิ์: โฉนด
+
+        </div>
+
+        <div class="buttons">
+
+          <a class="button call" href="tel:0800000000">
+
+            📞 โทรติดต่อ
+
+          </a>
+
+          <a class="button line" href="#">
+
+            💬 LINE
+
+          </a>
+
+          <a
+
+            class="button map"
+
+            href="https://maps.google.com"
+
+            target="_blank"
+
+          >
+
+            📍 ดูแผนที่
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <p>© 2026 NarongLand</p>
+
+    <p>เว็บไซต์ซื้อขายที่ดิน</p>
+
+  </footer>
+
+</body>
+
+</html>
