@@ -471,7 +471,59 @@ footer {
   </div>
 
 </footer>
+<script>
 
+const searchInput = document.getElementById("searchInput");
+
+const landCards = document.querySelectorAll(".land-card");
+
+const searchResult = document.getElementById("searchResult");
+
+searchInput.addEventListener("input", function() {
+
+  const keyword = this.value.toLowerCase().trim();
+
+  let found = 0;
+
+  landCards.forEach(function(card) {
+
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(keyword)) {
+
+      card.style.display = "block";
+
+      found++;
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+  if (keyword === "") {
+
+    searchResult.textContent = "แสดงที่ดินทั้งหมด";
+
+  } else if (found > 0) {
+
+    searchResult.textContent =
+
+      "พบประกาศ " + found + " รายการ";
+
+  } else {
+
+    searchResult.textContent =
+
+      "ไม่พบที่ดินที่ตรงกับคำค้น";
+
+  }
+
+});
+
+</script>
 </body>
 
 </html>
