@@ -275,13 +275,187 @@ footer {
   }
 
 }
+.land-card {
 
+  max-width: 1100px;
+
+  margin: 30px auto;
+
+  background: white;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+
+}
+
+.land-card img {
+
+  width: 100%;
+
+  display: block;
+
+  max-height: 550px;
+
+  object-fit: cover;
+
+}
+
+.land-info {
+
+  padding: 25px;
+
+}
+
+.land-info h2 {
+
+  color: #1f6f43;
+
+  margin-top: 0;
+
+}
+
+.price {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  color: #d35400;
+
+  margin: 15px 0;
+
+}
+
+.highlight {
+
+  background: #eef8f2;
+
+  border-left: 5px solid #1f6f43;
+
+  padding: 15px 20px;
+
+  margin: 20px 0;
+
+  border-radius: 8px;
+
+}
+
+.highlight h3 {
+
+  margin-top: 0;
+
+}
+
+.buttons {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 20px;
+
+}
+
+.buttons a {
+
+  text-decoration: none;
+
+  color: white;
+
+  background: #1f6f43;
+
+  padding: 13px 20px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+}
+
+.buttons a:hover {
+
+  opacity: 0.85;
+
+}
+
+@media (max-width: 600px) {
+
+  .land-info {
+
+    padding: 18px;
+
+  }
+
+  .price {
+
+    font-size: 24px;
+
+  }
+
+  .buttons {
+
+    flex-direction: column;
+
+  }
+
+  .buttons a {
+
+    text-align: center;
+
+  }
+
+}
 </style>
 
 </head>
 
 <body>
+<div class="land-card">
 
+  <h2>ขายที่ดินติดถนนทุ่งหลวงและซอย</h2>
+
+  <img src="IMG_2494.jpeg" alt="รูปที่ดิน">
+
+  <h3>💰 ราคา 7,339,250 บาท</h3>
+
+  <p>📐 ขนาด: 4 ไร่ 2 งาน 94 ตารางวา</p>
+
+  <p>📍 ตำบล: ขามใหญ่</p>
+
+  <p>🏙️ อำเภอ: เมืองอุบลราชธานี</p>
+
+  <p>🌳 จังหวัด: อุบลราชธานี</p>
+
+  <p>🛣️ ติดถนน: ทุ่งหลวง (ลาดยาง)</p>
+
+  <p>⚡ ไฟฟ้า: มี</p>
+
+  <p>💧 น้ำประปา: มี</p>
+
+  <p>📄 เอกสารสิทธิ์: โฉนด</p>
+
+  <h3>⭐ จุดเด่นของที่ดิน</h3>
+
+  <ul>
+
+    <li>ใกล้ตลาดนัดขามใหญ่</li>
+
+    <li>ใกล้โรงพยาบาลตำบลขามใหญ่</li>
+
+    <li>ใกล้ศูนย์พัฒนาเด็กเล็กบ้านหัวคำ</li>
+
+  </ul>
+
+  <p>📞 โทร: <a href="tel:0813483476">081-348-3476</a></p>
+
+  <p>💬 LINE: 0813483476</p>
+
+</div>
 <header>
 
   <h1>🏡 NarongLand</h1>
@@ -315,146 +489,80 @@ footer {
 </div>
 
   <!-- แปลงที่ดินที่ 1 -->
+<div class="land-card">
 
-  <div class="land-card">
+  <img src="IMG_2494.jpeg" alt="ที่ดินติดถนนทุ่งหลวง">
 
-    <img
+  <div class="land-info">
 
-      class="land-image"
+    <h2>🏡 ขายที่ดินติดถนนทุ่งหลวงและซอย</h2>
 
-      src="IMG_2494.jpeg"
+    <div class="price">
 
-      alt="แผนที่ที่ดินติดถนนทุ่งหลวง"
+      💰 7,339,250 บาท
 
-    >
+    </div>
 
-    <div class="land-info">
+    <p>📐 <b>ขนาด:</b> 4 ไร่ 2 งาน 94 ตารางวา</p>
 
-      <h2>ขายที่ดินติดถนนทุ่งหลวงและซอย ด้านหลังติดคลองน้ำสาธารณะ</h2>
+    <p>📍 <b>ตำบล:</b> ขามใหญ่</p>
 
-      <div class="price">
+    <p>🏙️ <b>อำเภอ:</b> เมืองอุบลราชธานี</p>
 
-        💰 7,339,250 บาท
+    <p>🌳 <b>จังหวัด:</b> อุบลราชธานี</p>
 
-      </div>
+    <p>🛣️ <b>ติดถนน:</b> ทุ่งหลวง (ลาดยาง)</p>
 
-      <div class="details">
+    <p>⚡ <b>ไฟฟ้า:</b> มี</p>
 
-        📐 <b>ขนาด:</b>
+    <p>💧 <b>น้ำประปา:</b> มี</p>
 
-        4 ไร่ 2 งาน 94 ตารางวา
+    <p>📄 <b>เอกสารสิทธิ์:</b> โฉนด</p>
 
-        <br>
+    <div class="highlight">
 
-        📍 <b>ตำบล:</b>
+      <h3>⭐ จุดเด่นของที่ดิน</h3>
 
-        ขามใหญ่
+      <ul>
 
-        <br>
+        <li>ใกล้ตลาดนัดขามใหญ่</li>
 
-        🏙️ <b>อำเภอ:</b>
+        <li>ใกล้โรงพยาบาลตำบลขามใหญ่</li>
 
-        เมืองอุบลราชธานี
+        <li>ใกล้ศูนย์พัฒนาเด็กเล็กบ้านหัวคำ</li>
 
-        <br>
+      </ul>
 
-        🌳 <b>จังหวัด:</b>
+    </div>
 
-        อุบลราชธานี
+    <div class="buttons">
 
-        <br>
+      <a href="tel:0813483476">
 
-        🛣️ <b>ติดถนน:</b>
+        📞 โทร 081-348-3476
 
-        ทุ่งหลวง (ลาดยาง)
+      </a>
 
-        <br>
+      <a href="https://line.me/ti/p/~0813483476">
 
-        ⚡ <b>ไฟฟ้า:</b>
+        💬 ติดต่อ LINE
 
-        มี
+      </a>
 
-        <br>
+      <a href="https://www.google.com/maps?q=15.3129388,104.8664751"
 
-        💧 <b>น้ำประปา:</b>
+         target="_blank">
 
-        มี
+        📍 ดูตำแหน่ง GPS
 
-        <br>
-
-        📄 <b>เอกสารสิทธิ์:</b>
-
-        โฉนด
-
-      </div>
-
-      <div class="highlight">
-
-        <strong>⭐ จุดเด่นของที่ดิน</strong>
-
-        <br><br>
-
-        • ใกล้ตลาดนัดขามใหญ่
-
-        <br>
-
-        • ใกล้โรงพยาบาลตำบลขามใหญ่
-
-        <br>
-
-        • ใกล้ศูนย์พัฒนาเด็กเล็กบ้านหัวคำ
-
-      </div>
-
-      <div class="buttons">
-
-        <a
-
-          class="button call"
-
-          href="tel:0813483476"
-
-        >
-
-          📞 โทร 081-348-3476
-
-        </a>
-
-        <a
-
-          class="button line"
-
-          href="https://line.me/ti/p/~0813483476"
-
-          target="_blank"
-
-        >
-
-          💬 ติดต่อ LINE
-
-        </a>
-
-        <a
-
-          class="button map"
-
-          href="https://www.google.com/maps?q=15.3129388,104.8664751"
-
-          target="_blank"
-
-        >
-
-          📍 ดูตำแหน่ง GPS
-
-        </a>
-
-      </div>
+      </a>
 
     </div>
 
   </div>
 
 </div>
+  
 
 <footer>
 
