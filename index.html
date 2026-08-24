@@ -469,13 +469,96 @@ footer {
   }
 
 }
+/* เมนูหลัก */
+
+.main-menu {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  background: #ffffff;
+
+  padding: 12px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+}
+
+/* ปุ่มเมนู */
+
+.main-menu a {
+
+  text-decoration: none;
+
+  color: #1f6f43;
+
+  font-weight: bold;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+}
+
+/* เมื่อแตะเมนู */
+
+.main-menu a:hover {
+
+  background: #1f6f43;
+
+  color: white;
+
+}
+
+/* สำหรับมือถือและ iPad */
+
+@media (max-width: 600px) {
+
+  .main-menu {
+
+    gap: 3px;
+
+    padding: 8px 4px;
+
+  }
+
+  .main-menu a {
+
+    padding: 9px 10px;
+
+    font-size: 14px;
+
+  }
+
+}
+  
 </style>
 
 </head>
 
 <body>
+    <!-- เมนูหลักของเว็บไซต์ -->
 
-<header>
+  <nav class="main-menu">
+
+    <a href="#home">🏠 หน้าหลัก</a>
+
+    <a href="#land-list">🏡 รายการที่ดิน</a>
+
+    <a href="#contact">📞 ติดต่อเรา</a>
+
+  </nav>
+
+<header id="home">
 
   <h1>🏡 NarongLand</h1>
 
@@ -507,6 +590,9 @@ footer {
 
 </div>
 
+  <!-- รายการที่ดินทั้งหมด -->  
+<div id="land-list">
+  
   <!-- แปลงที่ดินที่ 1 แม่จง -->
 <div class="land-card">
 
@@ -1124,17 +1210,19 @@ footer {
 
         📍 ดูตำแหน่ง GPS
 
-      </a> <!ปิดปุ่ม GPS >
+      </a> <!-- ปิดปุ่ม GPS -->
 
-    </div> <!ปิดส่วนปุ่มติดต่อ >
+    </div> <!-- ปิดส่วนปุ่มติดต่อ -->
 
-  </div> <!-ปิดข้อมูลแปลงที่ 4 >
+  </div> <!-- ปิดข้อมูลแปลงที่ 4 -->
 
-</div> <! ปิดการ์ดแปลงที่ 4 >
-  
-<footer> <!-- เริ่มส่วนท้ายเว็บไซต์ -->
+</div> <!-- ปิดการ์ดแปลงที่ 4 -->
 
-  <div>
+</div> <!-- ปิดรายการที่ดินทั้งหมด -->
+
+<footer id="contact"> <!-- เริ่มส่วนติดต่อเรา -->
+
+<div>
 
     © 2026 NarongLand
 
