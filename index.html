@@ -1,1435 +1,729 @@
 <!DOCTYPE html>
-
 <html lang="th">
-
 <head>
   <!-- Google Analytics -->
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-THT0PXHB98"></script>
-
 <script>
-
   window.dataLayer = window.dataLayer || [];
-
   function gtag(){
-
     dataLayer.push(arguments);
-
   }
-
   gtag('js', new Date());
-
   gtag('config', 'G-THT0PXHB98');
-
 </script>
-
 <!-- จบ Google Analytics -->
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>NarongLand | ซื้อขายที่ดิน</title>
-
 <style>
   /* ปุ่มติดต่อทั้งหมด */
-
 .button {
-
   display: inline-block;
-
   color: white;
-
   padding: 12px 18px;
-
   margin: 5px;
-
   border-radius: 8px;
-
   text-decoration: none;
-
   font-weight: bold;
-
 }
-
 /* ปุ่มโทร */
-
 .call {
-
   background: #1976d2;
-
 }
-
 /* ปุ่ม LINE */
-
 .line {
-
   background: #06c755;
-
 }
-
 /* ปุ่ม Email */
-
 .email {
   background: #f39c12;
-  
 }
-
 /* ปุ่ม GPS */
-
 .map {
-
   background: #f39c12;
-
 }
-
 /* เอฟเฟกต์เมื่อเอานิ้ว/เมาส์ไปแตะ */
-
 .button:hover {
-
   opacity: 0.85;
-
 }
-
 * {
-
   box-sizing: border-box;
-
 }
-
 body {
-
   margin: 0;
-
   font-family: Arial, "Noto Sans Thai", sans-serif;
-
   background: #f5f6f8;
-
   color: #333;
-
 }
-
 header {
-
   background: #1f6f43;
-
   color: white;
-
   padding: 25px 15px;
-
   text-align: center;
-
 }
-
 header h1 {
-
   margin: 0;
-
   font-size: 32px;
-
 }
-
 header p {
-
   margin: 8px 0 0;
-
   font-size: 17px;
-
 }
-
 .container {
-
   max-width: 1000px;
-
   margin: 25px auto;
-
   padding: 0 15px;
-
 }
-
 .search-box {
-
   background: white;
-
   padding: 20px;
-
   border-radius: 12px;
-
   margin-bottom: 25px;
-
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-
 }
-
 .search-box h2 {
-
   margin-top: 0;
-
 }
-
 .search-box input {
-
   width: 100%;
-
   padding: 13px;
-
   font-size: 16px;
-
   border: 1px solid #ccc;
-
   border-radius: 8px;
-
 }
-
 .land-card {
-
   background: white;
-
   border-radius: 15px;
-
   overflow: hidden;
-
   box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-
   margin-bottom: 30px;
-
 }
-
 .land-image {
-
   width: 100%;
-
   display: block;
-
   max-height: 550px;
-
   object-fit: cover;
-
 }
-
 .land-info {
-
   padding: 22px;
-
 }
-
 .land-info h2 {
-
   margin-top: 0;
-
   color: #1f6f43;
-
   font-size: 27px;
-
 }
-
 .price {
-
   color: #d35400;
-
   font-size: 27px;
-
   font-weight: bold;
-
   margin: 15px 0;
-
 }
-
 .details {
-
   line-height: 2;
-
   font-size: 17px;
-
 }
-
 .highlight {
-
   background: #f0f8f3;
-
   border-left: 5px solid #1f6f43;
-
   padding: 15px;
-
   margin-top: 20px;
-
   border-radius: 5px;
-
 }
-
 .buttons {
-
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 10px;
-
   margin-top: 25px;
-
 }
-
 .button {
-
   display: inline-block;
-
   text-decoration: none;
-
   color: white;
-
   padding: 13px 20px;
-
   border-radius: 8px;
-
   font-size: 16px;
-
   font-weight: bold;
-
 }
-
 .call {
-
   background: #1f6f43;
-
 }
-
 .line {
-
   background: #06c755;
-
 }
-
 .map {
-
   background: #4285f4;
-
 }
-
 footer {
-
   background: #222;
-
   color: white;
-
   text-align: center;
-
   padding: 25px;
-
   margin-top: 40px;
-
 }
-
 @media (max-width: 600px) {
-
   header h1 {
-
     font-size: 27px;
-
   }
-
   .land-info h2 {
-
     font-size: 23px;
-
   }
-
   .price {
-
     font-size: 23px;
-
   }
-
   .details {
-
     font-size: 16px;
-
   }
-
   .button {
-
     width: 100%;
-
     text-align: center;
-
   }
-
 }
 .land-card {
-
   max-width: 1100px;
-
   margin: 30px auto;
-
   background: white;
-
   border-radius: 18px;
-
   overflow: hidden;
-
   box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-
 }
-
 .land-card img {
-
   width: 100%;
-
   display: block;
-
   max-height: 550px;
-
   object-fit: cover;
-
 }
-
 .land-info {
-
   padding: 25px;
-
 }
-
 .land-info h2 {
-
   color: #1f6f43;
-
   margin-top: 0;
-
 }
-
 .price {
-
   font-size: 28px;
-
   font-weight: bold;
-
   color: #d35400;
-
   margin: 15px 0;
-
 }
-
 .highlight {
-
   background: #eef8f2;
-
   border-left: 5px solid #1f6f43;
-
   padding: 15px 20px;
-
   margin: 20px 0;
-
   border-radius: 8px;
-
 }
-
 .highlight h3 {
-
   margin-top: 0;
-
 }
-
 .buttons {
-
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 12px;
-
   margin-top: 20px;
-
 }
-
 .buttons a {
-
   text-decoration: none;
-
   color: white;
-
   background: #1f6f43;
-
   padding: 13px 20px;
-
   border-radius: 8px;
-
   font-weight: bold;
-
 }
-
 .buttons a:hover {
-
   opacity: 0.85;
-
 }
-
 @media (max-width: 600px) {
-
   .land-info {
-
     padding: 18px;
-
   }
-
   .price {
-
     font-size: 24px;
-
   }
-
   .buttons {
-
     flex-direction: column;
-
   }
-
   .buttons a {
-
     text-align: center;
-
   }
-
 }
 /* เมนูหลัก */
-
 .main-menu {
-
   display: flex;
-
   justify-content: center;
-
   gap: 10px;
-
   background: #ffffff;
-
   padding: 12px;
-
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
-
 }
-
 /* ปุ่มเมนู */
-
 .main-menu a {
-
   text-decoration: none;
-
   color: #1f6f43;
-
   font-weight: bold;
-
   padding: 10px 18px;
-
   border-radius: 8px;
-
 }
-
 /* เมื่อแตะเมนู */
-
 .main-menu a:hover {
-
   background: #1f6f43;
-
   color: white;
-
 }
-
 /* สำหรับมือถือและ iPad */
-
 @media (max-width: 600px) {
-
   .main-menu {
-
     gap: 3px;
-
     padding: 8px 4px;
-
   }
-
   .main-menu a {
-
     padding: 9px 10px;
-
     font-size: 14px;
-
   }
-
 }
-  
 </style>
-
 </head>
-
 <body>
     <!-- เมนูหลักของเว็บไซต์ -->
-
   <nav class="main-menu">
-
     <a href="#home">🏠 หน้าหลัก</a>
-
     <a href="#land-list">🏡 รายการที่ดิน</a>
-
     <a href="#contact">📞 ติดต่อเรา</a>
-
   </nav>
-
 <header id="home">
-
   <h1>🏡 NarongLand</h1>
-
   <p>เว็บไซต์ซื้อขายที่ดิน ฝากขายที่ดิน</p>
-
 </header>
-
 <div class="container">
-
   <div class="search-box">
-
   <h2>🔎 ค้นหาที่ดิน</h2>
-
   <input
-
     type="text"
-
     id="searchInput"
-
     placeholder="พิมพ์จังหวัด อำเภอ ตำบล หรือทำเล..."
-
   >
-
   <p id="searchResult">
-
     แสดงที่ดินทั้งหมด
-
   </p>
-
 </div>
-
   <!-- รายการที่ดินทั้งหมด -->  
 <div id="land-list">
-  
   <!-- แปลงที่ดินที่ 1 แม่จง -->
 <div class="land-card">
-
   <img src="ubonland-01.jpeg" alt="ที่ดินติดถนนทุ่งหลวง">
-
   <div class="land-info">
-
     <h2>🏡 ขายที่ดินติดถนนทุ่งหลวงและซอย ด้านหลังติดคลองน้ำสาธารณะ</h2>
-
     <div class="price">
-
       💰 7,339,250 บาท
-
     </div>
-
     <p>📐 <b>ขนาด:</b> 4 ไร่ 2 งาน 94 ตารางวา</p>
-
     <p>📍 <b>ตำบล:</b> ขามใหญ่</p>
-
     <p>🏙️ <b>อำเภอ:</b> เมืองอุบลราชธานี</p>
-
     <p>🌳 <b>จังหวัด:</b> อุบลราชธานี</p>
-
     <p>🛣️ <b>ติดถนน:</b> ทุ่งหลวง (ลาดยาง)</p>
-
     <p>⚡ <b>ไฟฟ้า:</b> มี</p>
-
     <p>💧 <b>น้ำประปา:</b> มี</p>
-
     <p>📄 <b>เอกสารสิทธิ์:</b> โฉนด</p>
-
     <div class="highlight">
-
       <h3>⭐ จุดเด่นของที่ดิน</h3>
-
       <ul>
-
         <li>ใกล้ตลาดนัดขามใหญ่</li>
-
         <li>ใกล้โรงพยาบาลตำบลขามใหญ่</li>
-
         <li>ใกล้ศูนย์พัฒนาเด็กเล็กบ้านหัวคำ</li>
-
       </ul>
-
     </div>
-
     <div class="buttons">
-      
   <!-- ปุ่ม โทรศัพท์ -->
-      
     <a href="tel:0813483476">
-
         📞 โทร 081-348-3476
-
       </a>
-
       <!-- ปุ่มติดต่อ LINE -->
-
       <a href="https://line.me/ti/p/~0813483476">
-
         💬 ติดต่อ LINE
-
       </a>
-      
 <!-- ปุ่ม Email -->
-
   <a class="button email"
-
     href="mailto:nadoonnoi@gmail.com"
-
   >
-
     📧 Email
-
   </a>
       <!-- ปุ่ม GPS -->
-
       <a href="https://www.google.com/maps?q=15.3129388,104.8664751"
-
          target="_blank">
-
         📍 ดูตำแหน่ง GPS
-
       </a>
-
     </div>
-
   </div>
-
 </div>
-  
-
   <!-- แปลงที่ดินที่ 2 น้าสวน -->
-
 <div class="land-card">
-
   <img
-
     class="land-image"
-
     src="ubonland-02.jpeg"
-
     alt="ที่ดินติดถนนหมู่ 16 ตำบลขามใหญ่"
-
   >
-
   <div class="land-info">
-
     <h2>🏡 ที่ดินติดถนนหมู่ 16 ต.ขามใหญ่</h2>
-
     <div class="price">
-
       💰 1,500,000 บาท
-
     </div>
-
     <div class="details">
-
       📐 <b>ขนาด:</b>
-
       3 งาน 6.6 ตารางวา
-
       <br>
-
       📍 <b>ตำบล:</b>
-
       ขามใหญ่
-
       <br>
-
       🏙️ <b>อำเภอ:</b>
-
       เมืองอุบลราชธานี
-
       <br>
-
       🌳 <b>จังหวัด:</b>
-
       อุบลราชธานี
-
       <br>
-
       🛣️ <b>ติดถนน:</b>
-
       นาดูนน้อย
-
       <br>
-
       ⚡ <b>ไฟฟ้า:</b>
-
       มี
-
       <br>
-
       💧 <b>น้ำประปา:</b>
-
       มี
-
       <br>
-
       📄 <b>เอกสารสิทธิ์:</b>
-
       โฉนด
-
     </div>
-
     <div class="highlight">
-
       <h3>⭐ จุดเด่นของที่ดิน</h3>
-
       <ul>
-
         <li>ใกล้โรงพยาบาล 50 พรรษาฯ</li>
-
         <li>ใกล้โรงเรียนบ้านปลาดุก</li>
-        
-        <li>ใกล้วัดพัฒนวิธาน(บ้านนาดูนน้อย)</li>      
-
+        <li>ใกล้วัดพัฒนวิธาน(บ้านนาดูนน้อย)</li>
       </ul>
-
     </div>
-
     <div class="buttons">
-
       <a
-
         class="button call"
-
         href="tel:0813483476"
-
       >
-
         📞 โทร 081-348-3476
-
       </a>
-
       <a
-
         class="button line"
-
         href="https://line.me/ti/p/~0813483476"
-
         target="_blank"
-
       >
-
         💬 ติดต่อ LINE
-
       </a>
-      
 <!-- ปุ่ม Email -->
   <a
     class="button email"
     href="mailto:nadoonnoi@gmail.com"
   >
     📧 Email
-
   </a>
-      
 <!-- ปุ่ม GPS -->
       <a
         class="button map"
-
         href="https://www.google.com/maps?q=15.2999961,104.8752818"
-
         target="_blank"
       >
         📍 ดูตำแหน่ง GPS
-
       </a> <!-- ปิดปุ่ม GPS -->
-
     </div>
-
   </div>
-
 </div>
   <!-- แปลงที่ดินที่ 3 Narong -->
-
 <div class="land-card">
-
   <!-- รูปภาพที่ดินแปลงที่ 3 -->
-
   <img
-
     class="land-image"
-
     src="ubonland-03.jpeg"
-
     alt="ที่ดินหน้าติดถนนหลังติดร่องน้ำสาธารณะ หมู่ 16 ตำบลขามใหญ่"
-
   >
-
   <!-- ข้อมูลที่ดินแปลงที่ 3 -->
-
   <div class="land-info">
-
     <!-- ชื่อประกาศ -->
-
     <h2>
-
       🏡 ที่ดินหน้าติดถนนหลังติดร่องน้ำสาธารณะ หมู่ 16 ต.ขามใหญ่
-
     </h2>
-
     <!-- ราคา -->
-
     <div class="price">
-
       💰 3,500,000 บาท
-
     </div>
-
     <!-- รายละเอียดที่ดิน -->
-
     <div class="details">
-
       <!-- ขนาด -->
-
       📐 <b>ขนาด:</b>
-
       3 ไร่ 28 ตารางวา
-
       <br>
-
       <!-- จังหวัด -->
-
       🌳 <b>จังหวัด:</b>
-
       อุบลราชธานี
-
       <br>
-
       <!-- อำเภอ -->
-
       🏙️ <b>อำเภอ:</b>
-
       เมืองอุบลราชธานี
-
       <br>
-
       <!-- ตำบล -->
-
       📍 <b>ตำบล:</b>
-
       ขามใหญ่
-
       <br>
-
       <!-- ถนน -->
-
       🛣️ <b>ติดถนน:</b>
-
       ซอยนาดูนน้อย
-
       <br>
-
       <!-- ไฟฟ้า -->
-
       ⚡ <b>ไฟฟ้า:</b>
-
       ไม่มี
-
       <br>
-
       <!-- น้ำประปา -->
-
       💧 <b>น้ำประปา:</b>
-
       ไม่มี
-
       <br>
-
       <!-- เอกสารสิทธิ์ -->
-
       📄 <b>เอกสารสิทธิ์:</b>
-
       2 โฉนด
-
     </div>
-
     <!-- จุดเด่น -->
-
     <div class="highlight">
-
       <h3>⭐ จุดเด่นของที่ดิน</h3>
-
       <ul>
-
         <!-- จุดเด่นที่ 1 -->
-
         <li>ใกล้โรงพยาบาล 50 พรรษาฯ</li>
-
         <!-- จุดเด่นที่ 2 -->
-
         <li>ใกล้วัดพัฒนวิธาน (บ้านนาดูนน้อย)</li>
-
       </ul>
-
     </div>
-
     <!-- ช่องทางติดต่อ -->
-
     <div class="buttons">
-
       <!-- โทรศัพท์ -->
-
       <a
-
         class="button call"
-
         href="tel:0813483476"
-
       >
-
         📞 โทร 081-348-3476
-
       </a>
-
       <!-- LINE -->
-
       <a
-
         class="button line"
-
         href="https://line.me/ti/p/~0813483476"
-
         target="_blank"
-
       >
-
         💬 ติดต่อ LINE
-
       </a>
-
       <!-- Email -->
-
       <a
-
         class="button email"
-
         href="mailto:nadoonnoi@gmail.com"
-
       >
-
         📧 Email
-
       </a>
-
       <!-- GPS -->
-
       <a
-
         class="button map"
-
         href="https://www.google.com/maps?q=15.30463222,104.87906190"
-
         target="_blank"
-
       >
-
         📍 ดูตำแหน่ง GPS
-
       </a> <!-- ปิดปุ่ม GPS -->
-
     </div> <!-- ปิดส่วนปุ่มติดต่อ -->
-
   </div> <!-- ปิดส่วนข้อมูลแปลงที่ 3 -->
-
 </div> <!-- ปิดกรอบแปลงที่ 3 -->
-
   <!-- แปลงที่ดินที่ 4 แม่จง/ลานต้นบก -->
-
 <div class="land-card">
-
   <!-- รูปภาพที่ดินแปลงที่ 4 -->
-
   <img
-
     class="land-image"
-
     src="ubonland-04.jpeg"
-
     alt="ที่ดินในซอยนาดูนน้อย หมู่ 16 ตำบลขามใหญ่"
-
   >
-
   <!-- ข้อมูลที่ดินแปลงที่ 4 -->
-
   <div class="land-info">
-
     <!-- ชื่อประกาศ -->
-
     <h2>
-
       🏡 ที่ดินในซอยนาดูนน้อย หมู่ 16 ต.ขามใหญ่
-
     </h2>
-
     <!-- ราคา -->
-
     <div class="price">
-
       💰 2,000,000 บาท
-
     </div>
-
     <!-- รายละเอียดที่ดิน -->
-
     <div class="details">
-
       <!-- ขนาด -->
-
       📐 <b>ขนาด:</b>
-
       3 งาน 75.6 ตารางวา
-
       <br>
-
       <!-- จังหวัด -->
-
       🌳 <b>จังหวัด:</b>
-
       อุบลราชธานี
-
       <br>
-
       <!-- อำเภอ -->
-
       🏙️ <b>อำเภอ:</b>
-
       เมืองอุบลราชธานี
-
       <br>
-
       <!-- ตำบล -->
-
       📍 <b>ตำบล:</b>
-
       ขามใหญ่
-
       <br>
-
       <!-- ถนน -->
-
-      🛣️ <b>ติดถนน:</b>
-
+      🛣️ <b>ติดถนน:</b
       ซอยนาดูนน้อย
-
       <br>
-
       <!-- ไฟฟ้า -->
-
       ⚡ <b>ไฟฟ้า:</b>
-
       มี
-
       <br>
-
       <!-- น้ำประปา -->
-
       💧 <b>น้ำประปา:</b>
-
       มี
-
       <br>
-
       <!-- เอกสารสิทธิ์ -->
-
       📄 <b>เอกสารสิทธิ์:</b>
-
       โฉนด
-
     </div>
-
     <!-- จุดเด่น -->
-
     <div class="highlight">
-
       <h3>⭐ จุดเด่นของที่ดิน</h3>
-
       <ul>
-
         <!-- จุดเด่นที่ 1 -->
-
         <li>ใกล้โรงพยาบาล 50 พรรษาฯ</li>
-
         <!-- จุดเด่นที่ 2 -->
-
         <li>ใกล้วัดพัฒนวิธาน (บ้านนาดูนน้อย)</li>
-
       </ul>
-
     </div>
-
     <!-- ช่องทางติดต่อ -->
-
     <div class="buttons">
-
       <!-- ปุ่มโทรศัพท์ -->
-
       <a
-
         class="button call"
-
         href="tel:0813483476"
-
       >
-
         📞 โทร 081-348-3476
-
       </a>
-
       <!-- ปุ่ม LINE -->
-
       <a
-
         class="button line"
-
         href="https://line.me/ti/p/~0813483476"
-
         target="_blank"
-
       >
-
         💬 ติดต่อ LINE
-
       </a>
-
       <!-- ปุ่ม Email -->
-
       <a
-
         class="button email"
-
         href="mailto:nadoonnoi@gmail.com"
-
       >
-
         📧 Email
-
       </a>
-
       <!-- ปุ่ม GPS -->
-
       <a
-
         class="button map"
-
         href="https://www.google.com/maps?q=15.29989527,104.87477387"
-
         target="_blank"
-
       >
-
         📍 ดูตำแหน่ง GPS
-
       </a> <!-- ปิดปุ่ม GPS -->
-
     </div> <!-- ปิดส่วนปุ่มติดต่อ -->
-
   </div> <!-- ปิดข้อมูลแปลงที่ 4 -->
-
 </div> <!-- ปิดการ์ดแปลงที่ 4 -->
-  
 <!-- แปลงที่ดินที่ 5 ยายเพียร/ซอยนักรบ -->
-
 <div class="land-card">
-
   <img
-
     class="land-image"
-
     src="ubonland-05.jpeg"
-
-    alt="ที่ดินเปล่า 2 แปลง หมู่ 16"
-
+    alt="ที่ดินเปล่า 2 แปลง หมู่ 16
   >
-
   <div class="land-info">
-
     <h2>🏡 ที่ดินเปล่า 2 แปลง หมู่ 16</h2>
-
     <div class="price">
-
       💰 900,000 บาท
-
     </div>
-
     <div class="details">
-
       <p>📐 <strong>ขนาด:</strong> 177 ตารางวา</p>
-
       <p>📍 <strong>ตำบล:</strong> ไร่น้อย</p>
-
       <p>🏙️ <strong>อำเภอ:</strong> เมืองอุบลราชธานี</p>
-
       <p>🌳 <strong>จังหวัด:</strong> อุบลราชธานี</p>
-
       <p>🛣️ <strong>ติดถนน:</strong> ซอยนักรบ</p>
-
       <p>⚡ <strong>ไฟฟ้า:</strong> มี</p>
-
       <p>💧 <strong>น้ำประปา:</strong> มี</p>
-
       <p>📄 <strong>เอกสารสิทธิ์:</strong> 2 โฉนด</p>
-
     </div>
-
     <div class="highlight">
-
       <h3>⭐ จุดเด่นของที่ดิน</h3>
-
       <ul>
-
         <li>ใกล้โรงพยาบาล 50 พรรษาฯ</li>
-
         <li>ใกล้โรงเรียนบ้านปลาดุก</li>
-
       </ul>
-
     </div>
-
     <!-- ปุ่มติดต่อแปลงที่ 5 -->
-
     <div class="buttons">
-
       <a
-
         class="button call"
-
         href="tel:0813483476"
-
       >
-
         📞 โทร 081-348-3476
-
       </a>
 <!-- ปุ่ม Line -->
         <a
-
         class="button line"
-
         href="https://line.me/ti/p/~0813483476"
-
         target="_blank"
-
       >
-
         💬 ติดต่อ LINE
-
       </a>
-
       <a
-
         class="button email"
-
         href="mailto:nadoonnoi@gmail.com"
-
       >
-
         📧 Email
-
       </a>
-
       <a
-
         class="button map"
-
         href="https://www.google.com/maps?q=15.29714835,104.87969165"
-
         target="_blank"
-
       >
-
         📍 ดูตำแหน่ง GPS
-
       </a>
-
     </div>
-
   </div>
-
 </div>
-
 <!-- จบแปลงที่ดินที่ 5 -->
-  
 </div> <!-- ปิดรายการที่ดินทั้งหมด -->
-
 <footer id="contact"> <!-- เริ่มส่วนติดต่อเรา -->
-
 <div>
-
     © 2026 NarongLand
-
   </div>
-
   <div>
-
     ซื้อขายที่ดิน อุบลราชธานี
-
   </div>
-
 </footer>
 <script>
-
 const searchInput = document.getElementById("searchInput");
-
 const landCards = document.querySelectorAll(".land-card");
-
 const searchResult = document.getElementById("searchResult");
-
 searchInput.addEventListener("input", function() {
-
   const keyword = this.value.toLowerCase().trim();
-
   let found = 0;
-
   landCards.forEach(function(card) {
-
     const text = card.innerText.toLowerCase();
-
     if (text.includes(keyword)) {
-
       card.style.display = "block";
-
       found++;
-
     } else {
-
       card.style.display = "none";
-
     }
-
   });
-
   if (keyword === "") {
-
     searchResult.textContent = "แสดงที่ดินทั้งหมด";
-
   } else if (found > 0) {
-
     searchResult.textContent =
-
       "พบประกาศ " + found + " รายการ";
-
   } else {
-
     searchResult.textContent =
-
       "ไม่พบที่ดินที่ตรงกับคำค้น";
-
   }
-
 });
-
 </script>
 </body>
-
 </html>
